@@ -39,7 +39,7 @@ minetest.register_node("fire:basic_flame", {
 		-- Restart timer
 		return true
 	end,
-	drop = "",
+	drop = {},
 
 	on_construct = function(pos)
 		minetest.get_node_timer(pos):start(math.random(30, 60))
