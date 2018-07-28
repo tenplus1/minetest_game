@@ -65,7 +65,7 @@ for i in ipairs (butter_list) do
 		walkable = false,
 		pointable = false,
 		diggable = false,
-		drop = "",
+		drop = {},
 		groups = {not_in_creative_inventory = 1},
 		floodable = true,
 		on_place = function(itemstack, placer, pointed_thing)
