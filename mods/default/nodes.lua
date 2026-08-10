@@ -650,6 +650,8 @@ minetest.register_node("default:snow", {
 	_tnt_loss = 1, -- means it will disappear entirely
 
 	on_construct = function(pos)
+		minetest.sound_play("default_place_node",
+				{pos = pos, max_hear_distance = 8}, true)
 		pos.y = pos.y - 1
 		if minetest.get_node(pos).name == "default:dirt_with_grass" then
 			minetest.set_node(pos, {name = "default:dirt_with_snow"})
